@@ -102,7 +102,7 @@ p {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
     padding: 24px 48px;
-    background: rgba(245,243,238,0.85);
+    
     backdrop-filter: blur(12px);
     border-bottom: 1px solid transparent;
     transition: border-color 0.3s;
@@ -110,13 +110,8 @@ p {
   nav.scrolled { border-color: var(--border); }
 
   .nav-logo {
-    font-family: var(--sans);
-    font-weight: 200;
-    font-size: 22px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--ink);
-    text-decoration: none;
+    width: 90px;
+	height: auto;
   }
   .nav-logo span { font-weight: 400; }
 
@@ -127,6 +122,7 @@ p {
     letter-spacing: 0.06em;
     color: var(--muted);
     text-decoration: none;
+	text-transform: uppercase;
     transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--ink); }
