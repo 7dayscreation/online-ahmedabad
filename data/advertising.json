@@ -1,0 +1,80 @@
+{
+  "works": [
+    {
+      "id": 1,
+      "type": "video",
+      "media": "images/birds.mp4",
+      "theme": "card-1",
+      "textColor": "text-white",
+      "tag": "Campaign - 2026",
+      "title": "Title here",
+      "delay": "reveal-delay-1"
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "theme": "card-2",
+      "textColor": "text-dark",
+      "tag": "Campaign - 2026",
+      "title": "Title here",
+      "delay": "reveal-delay-2"
+    },
+    {
+      "id": 3,
+      "type": "image",
+      "media": "images/hero-01.png",
+      "theme": "card-1",
+      "textColor": "text-dark",
+      "tag": "Campaign - 2023",
+      "title": "Title here",
+      "delay": "reveal-delay-3"
+    },
+    {
+      "id": 4,
+      "type": "color",
+      "theme": "card-4",
+      "textColor": "text-white",
+      "tag": "Campaign - 2023",
+      "title": "Title here",
+      "delay": "reveal-delay-4"
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "theme": "card-2",
+      "textColor": "text-dark",
+      "tag": "Campaign - 2023",
+      "title": "Title here",
+      "delay": "reveal-delay-1"
+    },
+    {
+      "id": 6,
+      "type": "image",
+      "media": "images/hero-01.png",
+      "theme": "card-2",
+      "textColor": "text-white",
+      "tag": "Campaign - 2023",
+      "title": "Title here",
+      "delay": "reveal-delay-2"
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "theme": "card-2",
+      "textColor": "text-dark",
+      "tag": "Campaign - 2023",
+      "title": "Title here",
+      "delay": "reveal-delay-3"
+    },
+    {
+      "id": 8,
+      "type": "video",
+      "media": "images/birds.mp4",
+      "theme": "card-2",
+      "textColor": "text-white",
+      "tag": "Campaign - 2026",
+      "title": "Title here",
+      "delay": "reveal-delay-4"
+    }
+  ]
+}

@@ -1,0 +1,380 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grid Layout</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">O<span> A</span></a>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#process">Process</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Start a Project</a>
+</nav>
+
+<!-- HERO 1 -->
+<section class="hero-grid">
+
+  <div class="hero-card">
+
+    <div class="card-img hero-bg">
+		<video autoplay muted loop playsinline>
+			<source src="images/super.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+    </div>
+
+    <div class="hero-content">
+
+      <div class="hero-top-text">New Version 1.0</div>
+
+      <h1 class="hero-title">Any good heading goes here</h1>
+
+      <p class="hero-subtext">
+        This is your sub text. Keep it short, clean and meaningful for better impact.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-bar">
+  <div class="marquee-track" id="marqueeTrack">
+    <!-- Duplicated for seamless loop -->
+    <span class="marquee-item"><span class="marquee-dot"></span>Brand Identity</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>UI/UX Design</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Motion Design</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Web Development</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Design Systems</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Art Direction</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Strategy & Research</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Brand Identity</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>UI/UX Design</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Motion Design</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Web Development</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Design Systems</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Art Direction</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Strategy & Research</span>
+  </div>
+</div>
+
+<!-- WORK 2 -->
+<section class="section" id="work" data-json="data/client.json">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-label">Selected Work</div>
+      <h2 class="section-title">Projects that<br>define us</h2>
+    </div>
+    <a href="#" class="section-link">All Projects -></a>
+  </div>
+
+  <div class="work-grid" id="workGrid"></div>
+  
+  
+</section>
+
+<section class="section" id="about">
+  <div class="about-grid">
+    <div class="about-visual reveal">
+      <div class="about-shapes">
+		<div class="card-img">
+				<img src="images/hero-01.png">
+			</div>
+      </div>
+      <!-- Floating badge -->
+      <div style="position:absolute; bottom:32px; right:32px; background:var(--ink); color:var(--white); border-radius:12px; padding:16px 20px; font-size:12px; font-weight:300; line-height:1.5; letter-spacing:0.04em;">
+        <div style="font-weight:200; opacity:0.5; margin-bottom:4px; font-size:10px; letter-spacing:0.15em; text-transform:uppercase;">Recognition</div>
+        <div>Awwwards Site of the Year</div>
+        <div style="opacity:0.5; font-size:11px; margin-top:2px;">2024 - Global</div>
+      </div>
+    </div>
+
+    <div class="about-content reveal reveal-delay-2">
+      <div class="section-label">About Online Ahmedabad</div>
+      <h2 class="about-lead">A studio obsessed with <em>craft</em> and clarity</h2>
+      <p class="about-body">
+        Founded in 2018, Forma is a design studio working at the intersection of strategy, identity, and technology. We believe great design solves real problems while moving people emotionally.
+      </p>
+      <p class="about-body">
+        Our small, tight-knit team of designers, strategists, and developers brings a thoughtful, collaborative approach to every project - from ambitious startups to established global brands.
+      </p>
+      <div class="about-tags">
+        <span class="about-tag">Figma-first</span>
+        <span class="about-tag">Agile process</span>
+        <span class="about-tag">Fully remote</span>
+        <span class="about-tag">Brand-led design</span>
+        <span class="about-tag">Accessibility</span>
+        <span class="about-tag">Award-winning</span>
+      </div>
+      <div style="margin-top:40px;">
+        <a href="#contact" class="btn-primary">Work With Us
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK 4 SECTION -->
+<section class="section" data-json="data/advertising.json">
+
+  <div class="work-grid" id="workGrid"></div>
+
+</section>
+
+<section class="section ai-section" id="aiSites">
+
+  <div class="section-header">
+    <div>
+      <div class="section-label">AI Tools</div>
+      <h2 class="section-title">AI Sites Collection</h2>
+    </div>
+  </div>
+
+  <div class="ai-list">
+
+    <a href="#" class="ai-item">
+
+  <div class="ai-left">
+    <div class="ai-num">01</div>
+    <div class="ai-name">Midjourney</div>
+
+    <div class="ai-badges">
+      <span class="badge red">New</span>
+      <span class="badge dark">Featured</span>
+    </div>
+  </div>
+
+  <div class="ai-tags">
+    <span>Paid</span>
+    <span>Image</span>
+    <span>AI Art</span>
+  </div>
+
+  <div class="ai-btn">View →</div>
+
+  <div class="ai-preview">
+  <img src="images/hero.jpg">
+</div>
+
+</a>
+
+<a href="#" class="ai-item">
+
+  <div class="ai-left">
+    <div class="ai-num">01</div>
+    <div class="ai-name">Midjourney</div>
+
+    <div class="ai-badges">
+      <span class="badge red">New</span>
+      <span class="badge dark">Featured</span>
+    </div>
+  </div>
+
+  <div class="ai-tags">
+    <span>Paid</span>
+    <span>Image</span>
+    <span>AI Art</span>
+  </div>
+
+  <div class="ai-btn">View →</div>
+
+  <div class="ai-preview">
+  <img src="images/hero.jpg">
+</div>
+
+</a>
+
+  </div>
+
+</section>
+
+<!-- SERVICES -->
+<section class="section services-bg" id="services" data-json="data/government.json">
+	<div class="section-header reveal">
+    <div>
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">Our <em>expertise</em></h2>
+    </div>
+    <a href="#" class="section-link">All Services -></a>
+  </div>
+  <div class="services-grid" id="servicesGrid"></div>
+
+</section>
+
+<!-- PROCESS -->
+<section class="section" style="padding-top:10" id="process">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-label">How We Work</div>
+      <h2 class="section-title">Our <em>process</em></h2>
+    </div>
+  </div>
+
+  <div class="process-steps">
+    <div class="process-step reveal">
+      <div class="step-num">01</div>
+      <h3 class="step-title">Discover</h3>
+      <p class="step-desc">We begin by listening - deep dives into your business, your audience, and the competitive landscape to understand what sets you apart.</p>
+    </div>
+    <div class="process-step reveal reveal-delay-1">
+      <div class="step-num">02</div>
+      <h3 class="step-title">Define</h3>
+      <p class="step-desc">We synthesize research into a clear strategic foundation: positioning, audience personas, and a design brief that guides every decision ahead.</p>
+    </div>
+    <div class="process-step reveal reveal-delay-2">
+      <div class="step-num">03</div>
+      <h3 class="step-title">Design</h3>
+      <p class="step-desc">Ideas become reality through iterative explorations - from rough concepts to refined, pixel-perfect deliverables that exceed expectations.</p>
+    </div>
+    <div class="process-step reveal reveal-delay-3">
+      <div class="step-num">04</div>
+      <h3 class="step-title">Deliver</h3>
+      <p class="step-desc">We hand off complete, documented systems built to scale - with full support to ensure a seamless launch and long-term success.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTS -->
+<section class="section" style="padding-top:0">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-label">Trusted By</div>
+      <h2 class="section-title">Brands we've<br><em>shaped</em></h2>
+    </div>
+  </div>
+  <div class="clients-grid reveal">
+    <div class="client-cell"><span class="client-name">Novatek</span></div>
+    <div class="client-cell"><span class="client-name">Prism</span></div>
+    <div class="client-cell"><span class="client-name">Orbis</span></div>
+    <div class="client-cell"><span class="client-name">Halcyon</span></div>
+    <div class="client-cell"><span class="client-name">Vela</span></div>
+    <div class="client-cell"><span class="client-name">Meridian</span></div>
+    <div class="client-cell"><span class="client-name">Solace</span></div>
+    <div class="client-cell"><span class="client-name">Cobalt</span></div>
+    <div class="client-cell"><span class="client-name">Lumis</span></div>
+    <div class="client-cell"><span class="client-name">Tern</span></div>
+  </div>
+  
+  <!-- Stats -->
+  <div class="stats-row reveal">
+    <div class="stat-item">
+      <div class="stat-num">148+</div>
+      <div class="stat-label">Projects Delivered</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">96%</div>
+      <div class="stat-label">Client Satisfaction</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">6 yrs</div>
+      <div class="stat-label">In the Industry</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">22</div>
+      <div class="stat-label">Awards Won</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="cta-bg-text">Let's Talk</div>
+  <div class="cta-label reveal">Ready When You Are</div>
+  <h2 class="cta-headline reveal">
+    Have a project<br>
+    <em>in mind?</em>
+  </h2>
+  <div class="cta-actions reveal">
+    <a href="mailto:hello@forma.studio" class="btn-primary" style="font-size:16px; padding:18px 40px;">
+      hello@forma.studio
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <path d="M2 12L12 2M12 2H5M12 2V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">For<span>ma</span></div>
+  <p class="footer-copy">(c) 2024 Forma Studio. All rights reserved.</p>
+  <ul class="footer-links">
+    <li><a href="#">Instagram</a></li>
+    <li><a href="#">Dribbble</a></li>
+    <li><a href="#">LinkedIn</a></li>
+    <li><a href="#">Twitter</a></li>
+  </ul>
+</footer>
+
+<script>
+  // Cursor
+  const cursor = document.getElementById('cursor');
+  let mx = 0, my = 0, cx = 0, cy = 0;
+
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+
+  function animCursor() {
+    cx += (mx - cx) * 0.15;
+    cy += (my - cy) * 0.15;
+    cursor.style.left = cx + 'px';
+    cursor.style.top = cy + 'px';
+    requestAnimationFrame(animCursor);
+  }
+  animCursor();
+
+  document.querySelectorAll('a, button, .work-card, .service-item, .client-cell, .process-step').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('expanded'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('expanded'));
+  });
+
+  // Nav scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Reveal on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Hero instant reveal
+  document.querySelectorAll('.hero .reveal').forEach((el, i) => {
+    setTimeout(() => el.classList.add('visible'), 200 + i * 150);
+  });
+</script>
+
+	<script src="js/app.js"></script>
+</body>
+</html>
