@@ -101,19 +101,19 @@ p {
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
-    padding: 24px 48px;
+    padding: 24px 38px;
     
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid transparent;
+    border-bottom: 0px solid transparent;
     transition: border-color 0.3s;
   }
   nav.scrolled { border-color: var(--border); }
 
   .nav-logo {
-    width: 90px;
-	height: auto;
-  }
-  .nav-logo span { font-weight: 400; }
+    max-height: 50px;
+    width: auto;
+    display: block;
+}
 
   .nav-links { display: flex; gap: 36px; list-style: none; }
   .nav-links a {
