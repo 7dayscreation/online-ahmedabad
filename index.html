@@ -6,24 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Primary SEO -->
-  <title>Online Ahmedabad | Public Listing Site</title>
-  <meta name="description" content="Online Ahmedabad is a Public Listing Site">
-  <meta name="keywords" content="Online Ahmedabad is a Public Listing Site">
+  <title>Online Ahmedabad | Award-Winning Creative Design Studio</title>
+  <meta name="description"
+    content="Online Ahmedabad is a premium design studio specializing in Brand Identity, UI/UX Design, and Digital Strategy. We craft high-impact digital experiences for global brands.">
+  <meta name="keywords"
+    content="Design Studio Ahmedabad, Brand Identity, UI UX Design, Web Development, Creative Agency, Digital Strategy">
   <meta name="author" content="Online Ahmedabad">
   <link rel="canonical" href="https://onlineahmedabad.com/">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://onlineahmedabad.com/">
-  <meta property="og:title" content="Online Ahmedabad is a Public Listing Site">
-  <meta property="og:description" content="Online Ahmedabad is a Public Listing Site">
+  <meta property="og:title" content="Online Ahmedabad | Award-Winning Creative Design Studio">
+  <meta property="og:description"
+    content="We blend strategic thinking with cutting-edge design to create digital products that captivate audiences.">
   <meta property="og:image" content="images/og-image.jpg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://onlineahmedabad.com/">
-  <meta property="twitter:title" content="Online Ahmedabad is a Public Listing Site">
-  <meta property="twitter:description" content="Online Ahmedabad is a Public Listing Site">
+  <meta property="twitter:title" content="Online Ahmedabad | Creative Design Studio">
+  <meta property="twitter:description" content="High-impact digital experiences and brand identity for global brands.">
   <meta property="twitter:image" content="images/og-image.jpg">
 
   <!-- AEO Structured Data (JSON-LD) -->
@@ -421,6 +424,131 @@
       setTimeout(() => el.classList.add('visible'), 200 + i * 150);
     });
 
+        // CENTRAL DATA STORE
+    const SITE_DATA = {
+      stats: {
+        runningProjects: 7,
+        deliveredProjects: 8
+      },
+      services: [
+        { "number": "01", "icon": "fa-circle", "title": "Brand Identity", "desc": "Logos, visual systems...", "link": "#" },
+        { "number": "02", "icon": "fa-layer-group", "title": "UI / UX Design", "desc": "Interfaces that are both beautiful...", "link": "#" },
+        { "number": "03", "icon": "fa-wave-square", "title": "Motion Design", "desc": "Animated experiences...", "link": "#" },
+        { "number": "04", "icon": "fa-diagram-project", "title": "Design Systems", "desc": "Scalable component libraries...", "link": "#" },
+        { "number": "05", "icon": "fa-code", "title": "Web Development", "desc": "High-performance websites...", "link": "#" },
+        { "number": "06", "icon": "fa-network-wired", "title": "Strategy & Research", "desc": "Data-driven insights...", "link": "#" },
+        { "number": "07", "icon": "fa-scale-balanced", "title": "Policy & Research", "desc": "Data-driven insights...", "link": "#" }
+      ]
+    };
+
+    function updateDynamicStats() {
+      const runningEl = document.getElementById('running-projects-count');
+      const deliveredEl = document.getElementById('projects-delivered-count');
+      if (runningEl) runningEl.textContent = SITE_DATA.stats.runningProjects.toString().padStart(2, '0');
+      if (deliveredEl) deliveredEl.textContent = SITE_DATA.stats.deliveredProjects + '+';
+    }
+
+    async function loadServices() {
+      const servicesGrid = document.getElementById('servicesGrid');
+      if (!servicesGrid) return;
+      let servicesData = [];
+      try {
+        const response = await fetch('./data/government.json');
+        if (!response.ok) throw new Error();
+        servicesData = (await response.json()).services;
+      } catch (e) { servicesData = SITE_DATA.services; }
+
+      servicesGrid.innerHTML = servicesData.map(service => `
+        <div class="service-item reveal">
+          <div class="service-num">${service.number}</div>
+          <div class="service-content">
+            <div class="service-icon"><i class="fa-solid ${service.icon}"></i></div>
+            <h3 class="service-title">${service.title}</h3>
+            <p class="service-desc">${service.desc}</p>
+            <a href="${service.link}" class="service-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      `).join('');
+
+      document.querySelectorAll('.service-item.reveal').forEach(el => {
+        observer.observe(el);
+        if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible');
+      });
+    }
+
+        let aiCurrentPage = 0;
+    const aiPageSize = 10;
+
+        async function loadAISites() {
+        const section = document.getElementById('aiSites');
+        const aiGrid = document.getElementById('aiSitesGrid');
+        if (!aiGrid || !section) return;
+        const jsonPath = section.getAttribute('data-json');
+        let aiData = [];
+        try {
+          const response = await fetch(`./${jsonPath}`);
+          if (!response.ok) throw new Error();
+          aiData = await response.json();
+        } catch (e) { aiData = SITE_DATA.aiSites; }
+
+        // JSON is already Newest First. We map it to keep the sequence but calculate the numbering correctly.
+        const sequencedData = aiData.map((item, index) => ({
+          ...item,
+          originalNum: aiData.length - index
+        }));
+
+        const start = aiCurrentPage * aiPageSize;
+        const end = start + aiPageSize;
+        const pageItems = sequencedData.slice(start, end);
+
+        const aiHTML = pageItems.map((site, index) => {
+          const siteDate = site.date ? new Date(`${site.date}T00:00:00`) : null;
+          const isNew = siteDate && !Number.isNaN(siteDate.getTime())
+            ? (Date.now() - siteDate.getTime()) / (1000 * 60 * 60 * 24) <= 14
+            : false;
+          const badgeHTML = site.featured
+            ? '<span class="badge dark">Featured</span>'
+            : (isNew ? '<span class="badge red">NEW</span>' : '');
+          const tagsHTML = (site.tags || []).slice(0, 3).map(tag => `<span class="tag-pill">${tag}</span>`).join('');
+
+          return `
+          <a href="${site.link}" class="ai-item reveal" style="--delay: ${index * 100}ms">
+            <div class="ai-left">
+              <div class="ai-num">${site.originalNum.toString().padStart(2, '0')}</div>
+              <div class="ai-info">
+                <div class="ai-name">${site.name}</div>
+                <div class="ai-badges">
+                  ${badgeHTML}
+                </div>
+              </div>
+            </div>
+            <div class="ai-tags">
+              ${tagsHTML}
+            </div>
+            <div class="ai-btn-container">
+              <div class="ai-btn">View <i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </div>
+            <div class="ai-preview">
+              <img src="${site.image}" alt="${site.name}" loading="lazy">
+            </div>
+          </a>
+        `;
+        }).join('');
+
+        if (aiCurrentPage === 0) aiGrid.innerHTML = aiHTML;
+        else aiGrid.innerHTML += aiHTML;
+
+        aiGrid.querySelectorAll('.ai-item.reveal:not(.visible)').forEach(el => {
+          observer.observe(el);
+          if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible');
+        });
+
+        aiCurrentPage++;
+      }
+
+    updateDynamicStats();
+    loadServices();
+    loadAISites();
 </script>
 
   <script src="js/app.js"></script>
