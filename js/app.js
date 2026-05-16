@@ -118,28 +118,30 @@ document.addEventListener("DOMContentLoaded", () => {
               : "is-dark";
 
           const card = `
-            <div class="work-card reveal"
-                 style="transition-delay:${delay}s">
+  <a href="${item.link}" 
+     class="work-card reveal"
+     style="transition-delay:${delay}s"
+     target="_blank">
 
-              <div class="work-card-img ${item.theme}">
-                ${mediaHTML}
-              </div>
+    <div class="work-card-img ${item.theme}">
+      ${mediaHTML}
+    </div>
 
-              <div class="card-arrow">
-                <svg width="14" height="14" viewBox="0 0 14 14">
-                  <path d="M2 12L12 2M12 2H5M12 2V9"
-                    stroke="currentColor"
-                    stroke-width="1.5"/>
-                </svg>
-              </div>
+    <div class="card-arrow">
+      <svg width="14" height="14" viewBox="0 0 14 14">
+        <path d="M2 12L12 2M12 2H5M12 2V9"
+          stroke="currentColor"
+          stroke-width="1.5"/>
+      </svg>
+    </div>
 
-              <div class="work-card-info ${textClass}">
-                <div class="card-tag">${item.tag}</div>
-                <div class="card-name">${item.title}</div>
-              </div>
+    <div class="work-card-info ${textClass}">
+      <div class="card-tag">${item.tag}</div>
+      <div class="card-name">${item.title}</div>
+    </div>
 
-            </div>
-          `;
+  </a>
+`;
 
           grid.insertAdjacentHTML("beforeend", card);
         });
@@ -160,21 +162,28 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+/* AI SITES JSON LOAD */
+
+/* AI SITES */
+
 document.addEventListener("DOMContentLoaded", () => {
 
-  console.log("🔥 SERVICES INIT");
+  // PREVENT DOUBLE INIT
+  if (window.aiSitesLoaded) return;
+  window.aiSitesLoaded = true;
 
-  const container = document.getElementById("servicesGrid");
-  const section = document.getElementById("services");
+  const section = document.getElementById("aiSites");
+  const container = document.getElementById("aiSitesGrid");
+  const loadMoreBtn = document.getElementById("loadMoreAi");
 
-  if (!section || !container) {
-    console.error("❌ Missing section or container");
-    return;
-  }
+  if (!section || !container || !loadMoreBtn) return;
 
   const jsonPath = section.dataset.json;
 
-  console.log("📦 Loading JSON:", jsonPath);
+  const itemsPerLoad = 10;
+
+  let allData = [];
+  let currentIndex = 0;
 
   fetch(jsonPath)
     .then(res => {
@@ -183,40 +192,69 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then(data => {
 
-      console.log("✅ DATA LOADED:", data);
+      allData = data;
 
       container.innerHTML = "";
 
-      data.services
-        .slice()        // copy array
-        .reverse()      // last → first
-        .forEach(item => {
+      renderItems();
 
-          container.insertAdjacentHTML("beforeend", `
-            <div class="service-item reveal">
-
-              <div class="service-num">${item.number}</div>
-
-              <div class="service-icon">
-                <i class="fa-solid ${item.icon}"></i>
-              </div>
-
-              <div class="service-name">${item.title}</div>
-
-              <p class="service-desc">${item.desc}</p>
-
-              <a href="${item.link}" class="service-link" target="_blank">
-                View Site →
-              </a>
-
-            </div>
-          `);
-
-        });
+      loadMoreBtn.addEventListener("click", renderItems);
 
     })
-    .catch(err => {
-      console.error("❌ FETCH ERROR:", err);
+    .catch(err => console.error(err));
+
+  function renderItems() {
+
+    const items = allData.slice(currentIndex, currentIndex + itemsPerLoad);
+    const total = allData.length;
+
+    items.forEach((item, index) => {
+
+      const number = total - (currentIndex + index);
+      const formatted = number < 10 ? `0${number}` : number;
+
+      const tagsHTML = (item.tags || [])
+        .slice(0, 3)
+        .map(tag => `<span>${tag}</span>`)
+        .join("");
+
+      container.insertAdjacentHTML("beforeend", `
+        <div class="ai-card">
+
+          <div class="ai-number">${formatted}</div>
+
+          <div class="ai-image">
+            <img src="${item.image}" alt="${item.name}">
+          </div>
+
+          <div class="ai-content">
+            <div class="ai-title">${item.name}</div>
+            <div class="ai-tags">${tagsHTML}</div>
+          </div>
+
+          <div class="ai-date">${item.date}</div>
+
+          <div class="ai-action">
+            <a href="${item.url}" target="_blank" class="visit-btn">
+              View Site
+            </a>
+          </div>
+
+        </div>
+      `);
+
     });
 
+    currentIndex += itemsPerLoad;
+
+    if (currentIndex >= total) {
+      loadMoreBtn.style.display = "none";
+    }
+  }
+
 });
+
+/* Scroll With Image  */
+
+
+

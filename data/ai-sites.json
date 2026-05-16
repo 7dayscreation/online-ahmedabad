@@ -1,0 +1,119 @@
+[
+  {
+    "id": "ollama",
+    "name": "Ollama Gemma4",
+    "tags": ["Agentic Workflows", "Coding", "Multimodal Understanding"],
+    "image": "images/ahmedabad.jpg",
+    "link": "https://ollama.com/library/gemma4",
+    "date": "2026-05-02",
+    "featured": true
+  },
+  {
+    "id": "video2x",
+    "name": "Video2x",
+    "tags": ["Video Upscaler", "Video 2x Upscaler", "Free Video Upscaler"],
+    "image": "images/ahmedabad.jpg",
+    "link": "https://github.com/k4yt3x/video2x",
+    "date": "2026-04-29",
+    "featured": true
+  },
+  {
+    "id": "sarvam",
+    "name": "Sarvam",
+    "tags": ["Voice agents", "Speech to text", "Text to speech"],
+    "image": "images/ahmedabad.jpg",
+    "link": "https://www.sarvam.ai/",
+    "date": "2026-04-28",
+    "featured": true
+  },
+  {
+    "id": "chatgpt",
+    "name": "ChatGPT Codex",
+    "tags": ["AI", "Chatbot", "Productivity"],
+    "image": "images/ahmedabad.jpg",
+    "link": "https://chat.openai.com",
+    "date": "2026-04-28",
+    "featured": false
+  },
+  {
+    "id": "gemini",
+    "name": "Google Gemini",
+    "tags": ["AI", "Assistant", "Search"],
+    "image": "images/ahmedabad.jpg",
+    "link": "https://gemini.google.com",
+    "date": "2026-04-27",
+    "featured": false
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "tags": ["AI", "Writing", "Assistant"],
+    "image": "images/ahmedabad.jpg",
+    "link": "https://claude.ai",
+    "date": "2026-04-26",
+    "featured": false
+  },
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "tags": ["AI", "Image", "Design"],
+    "image": "assets/imgs/serv/midjourney.jpg",
+    "link": "https://www.midjourney.com",
+    "date": "2026-04-25",
+    "featured": false
+  },
+  {
+    "id": "dalle",
+    "name": "DALL·E",
+    "tags": ["AI", "Image", "Generation"],
+    "image": "assets/imgs/serv/dalle.jpg",
+    "link": "https://openai.com/dall-e",
+    "date": "2026-04-24",
+    "featured": false
+  },
+  {
+    "id": "runwayml",
+    "name": "Runway ML",
+    "tags": ["AI", "Video", "Editing"],
+    "image": "assets/imgs/serv/runway.jpg",
+    "link": "https://runwayml.com",
+    "date": "2026-04-23",
+    "featured": false
+  },
+  {
+    "id": "notion-ai",
+    "name": "Notion AI",
+    "tags": ["AI", "Productivity", "Notes"],
+    "image": "assets/imgs/serv/notion.jpg",
+    "link": "https://www.notion.so/product/ai",
+    "date": "2026-04-22",
+    "featured": false
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity AI",
+    "tags": ["AI", "Search", "Research"],
+    "image": "assets/imgs/serv/perplexity.jpg",
+    "link": "https://www.perplexity.ai",
+    "date": "2026-04-21",
+    "featured": false
+  },
+  {
+    "id": "leonardo",
+    "name": "Leonardo AI",
+    "tags": ["AI", "Design", "Art"],
+    "image": "assets/imgs/serv/leonardo.jpg",
+    "link": "https://leonardo.ai",
+    "date": "2026-04-20",
+    "featured": false
+  },
+  {
+    "id": "jasper",
+    "name": "Jasper AI",
+    "tags": ["AI", "Writing", "Marketing"],
+    "image": "assets/imgs/serv/jasper.jpg",
+    "link": "https://www.jasper.ai",
+    "date": "2026-04-19",
+    "featured": false
+  }
+]

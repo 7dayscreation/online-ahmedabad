@@ -3,68 +3,75 @@
     {
       "id": 1,
       "type": "image",
-      "media": "images/chat.png",
+      "media": "images/khazana-stores.jpg",
       "theme": "card-1",
       "textColor": "text-white",
-      "tag": "Campaign - 2026",
-      "title": "Title here",
-      "delay": "reveal-delay-1"
+      "tag": "Campaign & Advertising",
+      "title": "Khazana Stores",
+      "delay": "reveal-delay-1",
+	  "link": "https://khazanastores.com"
     },
     {
       "id": 2,
       "type": "text",
       "theme": "card-2",
       "textColor": "text-dark",
-      "tag": "Campaign - 2026",
-      "title": "Title here",
-      "delay": "reveal-delay-2"
+      "tag": "International",
+      "title": "Khazana Furniture Stores",
+      "delay": "reveal-delay-2",
+	  "link": "https://khazanastores.com"
     },
     {
       "id": 3,
       "type": "image",
-      "media": "images/hero-01.png",
+      "media": "images/area.jpg",
       "theme": "card-1",
-      "textColor": "text-dark",
-      "tag": "Campaign - 2023",
-      "title": "Title here",
-      "delay": "reveal-delay-3"
+      "textColor": "text-white",
+      "tag": "Campaign & Advertising",
+      "title": "Area Square Feet",
+      "delay": "reveal-delay-3",
+	  "link": "https://areasquarefeet.com"
     },
     {
       "id": 4,
       "type": "color",
-      "theme": "card-4",
-      "textColor": "text-white",
-      "tag": "Campaign - 2023",
-      "title": "Title here",
-      "delay": "reveal-delay-4"
+      "theme": "card-1",
+      "textColor": "text-dark",
+      "tag": "Area Square Feet",
+      "title": "Property Price Trand",
+      "delay": "reveal-delay-4",
+	  "link": "https://areasquarefeet.com"
     },
     {
       "id": 5,
       "type": "text",
       "theme": "card-2",
       "textColor": "text-dark",
-      "tag": "Campaign - 2023",
-      "title": "Title here",
-      "delay": "reveal-delay-1"
+      "tag": "Campaign & Advertising",
+      "title": "Weisdom Design Build",
+      "delay": "reveal-delay-1",
+	  "link": "https://weisdom.co.in"
     },
     {
       "id": 6,
       "type": "image",
-      "media": "images/hero-01.png",
+      "media": "images/ample-living.jpg",
       "theme": "card-2",
       "textColor": "text-white",
-      "tag": "Campaign - 2023",
-      "title": "Title here",
-      "delay": "reveal-delay-2"
+      "tag": "Weisdom",
+      "title": "Ample Living",
+      "delay": "reveal-delay-2",
+	  "link": "https://weisdom.co.in"
     },
     {
       "id": 7,
       "type": "text",
       "theme": "card-2",
       "textColor": "text-dark",
-      "tag": "Campaign - 2023",
-      "title": "Title here",
-      "delay": "reveal-delay-3"
+      "tag": "Campaign & Advertising",
+      "title": "Zill Patel Architect",
+      "delay": "reveal-delay-3",
+	  "link": "https://zillpatel.com"
     },
     {
       "id": 8,
@@ -72,9 +79,10 @@
       "media": "images/birds.mp4",
       "theme": "card-2",
       "textColor": "text-white",
-      "tag": "Campaign - 2026",
-      "title": "Title here",
-      "delay": "reveal-delay-4"
+      "tag": "Campaign & Advertising",
+      "title": "ZillPatel.com",
+      "delay": "reveal-delay-4",
+	  "link": "https://zillpatel.com"
     }
   ]
 }

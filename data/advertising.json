@@ -2,22 +2,24 @@
   "works": [
     {
       "id": 1,
-      "type": "video",
-      "media": "images/birds.mp4",
+      "type": "image",
+      "media": "images/w86ag.jpg",
       "theme": "card-1",
       "textColor": "text-white",
-      "tag": "Campaign - 2026",
-      "title": "Title here",
-      "delay": "reveal-delay-1"
+      "tag": "Campaign & Advertising",
+      "title": "w86ag.com",
+      "delay": "reveal-delay-1",
+	  "link": "https://w86ag.com"
     },
     {
       "id": 2,
       "type": "text",
       "theme": "card-2",
       "textColor": "text-dark",
-      "tag": "Campaign - 2026",
-      "title": "Title here",
-      "delay": "reveal-delay-2"
+      "tag": "Campaign & Advertising",
+      "title": "w86ag.com",
+      "delay": "reveal-delay-2",
+	  "link": "https://w86ag.com"
     },
     {
       "id": 3,
@@ -25,46 +27,51 @@
       "media": "images/hero-01.png",
       "theme": "card-1",
       "textColor": "text-dark",
-      "tag": "Campaign - 2023",
-      "title": "Title here",
-      "delay": "reveal-delay-3"
+      "tag": "Paarit Joshi",
+      "title": "Gyan Sutra",
+      "delay": "reveal-delay-3",
+	  "link": "https://paaritjoshi.com"
     },
     {
       "id": 4,
       "type": "color",
       "theme": "card-4",
       "textColor": "text-white",
-      "tag": "Campaign - 2023",
-      "title": "Title here",
-      "delay": "reveal-delay-4"
+      "tag": "Campaign & Advertising",
+      "title": "Paarit Joshi",
+      "delay": "reveal-delay-4",
+	  "link": "https://paaritjoshi.com"
     },
     {
       "id": 5,
       "type": "text",
       "theme": "card-2",
       "textColor": "text-dark",
-      "tag": "Campaign - 2023",
-      "title": "Title here",
-      "delay": "reveal-delay-1"
+      "tag": "Design Agency in Ahmedabad",
+      "title": "7 Days Creation",
+      "delay": "reveal-delay-1",
+	  "link": "https://7dayscreation.com"
     },
     {
       "id": 6,
       "type": "image",
-      "media": "images/hero-01.png",
+      "media": "images/7dc.jpg",
       "theme": "card-2",
       "textColor": "text-white",
-      "tag": "Campaign - 2023",
-      "title": "Title here",
-      "delay": "reveal-delay-2"
+      "tag": "Campaign & Advertising",
+      "title": "7 Days Creation",
+      "delay": "reveal-delay-2",
+	  "link": "https://7dayscreation.com"
     },
     {
       "id": 7,
       "type": "text",
       "theme": "card-2",
       "textColor": "text-dark",
-      "tag": "Campaign - 2023",
-      "title": "Title here",
-      "delay": "reveal-delay-3"
+      "tag": "Campaign & Advertising",
+      "title": "ArchSaga Magazine",
+      "delay": "reveal-delay-3",
+	  "link": "https://archsaga.com"
     },
     {
       "id": 8,
@@ -72,9 +79,10 @@
       "media": "images/birds.mp4",
       "theme": "card-2",
       "textColor": "text-white",
-      "tag": "Campaign - 2026",
-      "title": "Title here",
-      "delay": "reveal-delay-4"
+      "tag": "Campaign & Advertising",
+      "title": "ArchSaga Magazine",
+      "delay": "reveal-delay-4",
+	  "link": "https://archsaga.com"
     }
   ]
 }

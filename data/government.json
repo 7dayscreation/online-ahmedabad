@@ -4,57 +4,121 @@
       "id": 1,
       "number": "01",
       "icon": "fa-circle",
-      "title": "Brand Identity",
-      "desc": "Logos, visual systems...",
-      "link": "#"
+      "title": "Parivahan Sewa",
+      "desc": "Driving licence apply, renewal, RC and challan services",
+      "link": "https://parivahan.gov.in"
     },
     {
       "id": 2,
       "number": "02",
       "icon": "fa-layer-group",
-      "title": "UI / UX Design",
-      "desc": "Interfaces that are both beautiful...",
-      "link": "#"
+      "title": "Digital Gujarat Portal",
+      "desc": "Certificates, scholarships and Gujarat citizen services",
+      "link": "https://www.digitalgujarat.gov.in"
     },
     {
       "id": 3,
       "number": "03",
       "icon": "fa-wave-square",
-      "title": "Motion Design",
-      "desc": "Animated experiences...",
-      "link": "#"
+      "title": "AnyROR Gujarat",
+      "desc": "Land records including 7/12 and 8A online",
+      "link": "https://anyror.gujarat.gov.in"
     },
     {
       "id": 4,
       "number": "04",
       "icon": "fa-diagram-project",
-      "title": "Design Systems",
-      "desc": "Scalable component libraries...",
-      "link": "#"
+      "title": "iKhedut Portal",
+      "desc": "Farmer schemes and agriculture subsidy services",
+      "link": "https://ikhedut.gujarat.gov.in"
     },
     {
       "id": 5,
       "number": "05",
       "icon": "fa-code",
-      "title": "Web Development",
-      "desc": "High-performance websites...",
-      "link": "#"
+      "title": "e-Nagar Gujarat",
+      "desc": "Urban services like property tax and water bills",
+      "link": "https://enagar.gujarat.gov.in"
     },
     {
       "id": 6,
       "number": "06",
       "icon": "fa-network-wired",
-      "title": "Strategy & Research",
-      "desc": "Data-driven insights...",
-      "link": "#"
+      "title": "e-Dhara Gujarat",
+      "desc": "Digitally signed land records and mutation services",
+      "link": "https://edhara.gujarat.gov.in"
     },
     {
       "id": 7,
       "number": "07",
       "icon": "fa-scale-balanced",
-      "title": "Policy & Research",
-      "desc": "Data-driven insights...",
-      "link": "#"
+      "title": "SSO Gujarat",
+      "desc": "Single sign-on access for multiple Gujarat services",
+      "link": "https://sso.gujarat.gov.in"
+    },
+    {
+      "id": 8,
+      "number": "08",
+      "icon": "fa-briefcase",
+      "title": "nProcure Gujarat",
+      "desc": "Government tenders and procurement system",
+      "link": "https://nprocure.com"
+    },
+    {
+      "id": 9,
+      "number": "09",
+      "icon": "fa-comments",
+      "title": "SWAGAT Online",
+      "desc": "Grievance redressal system to contact CM office",
+      "link": "https://swagat.gujarat.gov.in"
+    },
+    {
+      "id": 10,
+      "number": "10",
+      "icon": "fa-globe",
+      "title": "e-Gram Vishwagram",
+      "desc": "Village-level digital services and certificates",
+      "link": "https://egram.gujarat.gov.in"
+    },
+    {
+      "id": 11,
+      "number": "11",
+      "icon": "fa-folder",
+      "title": "DigiLocker",
+      "desc": "Store and access documents like DL, RC and Aadhaar",
+      "link": "https://www.digilocker.gov.in"
+    },
+    {
+      "id": 12,
+      "number": "12",
+      "icon": "fa-mobile",
+      "title": "UMANG App",
+      "desc": "Access multiple government services in one app",
+      "link": "https://umang.gov.in"
+    },
+    {
+      "id": 13,
+      "number": "13",
+      "icon": "fa-id-card",
+      "title": "Aadhaar Portal",
+      "desc": "Update, download and manage Aadhaar details",
+      "link": "https://uidai.gov.in"
+    },
+    {
+      "id": 14,
+      "number": "14",
+      "icon": "fa-file-invoice",
+      "title": "Income Tax e-Filing",
+      "desc": "File income tax returns and manage PAN details",
+      "link": "https://www.incometax.gov.in"
+    },
+    {
+      "id": 15,
+      "number": "15",
+      "icon": "fa-receipt",
+      "title": "GST Portal",
+      "desc": "GST registration, returns and tax services",
+      "link": "https://www.gst.gov.in"
     }
   ]
 }
